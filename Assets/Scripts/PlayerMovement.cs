@@ -29,5 +29,9 @@ public class PlayerMovement : MonoBehaviour
         if (theCollision.gameObject.tag == "Ground") {
             isGrounded = true;
         }
+        if (theCollision.gameObject.name == "Coin") {
+            GetComponent<SpriteRenderer>().color = Color.yellow;
+            Destroy(theCollision.gameObject);
+        }
     }
 }
